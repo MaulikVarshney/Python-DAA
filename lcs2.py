@@ -15,7 +15,7 @@ def get_subsets(fullset):
         subsets.append(subset)        
     return subsets
         
-    return subsets
+  
 
    
 
