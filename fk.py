@@ -27,14 +27,11 @@ def get_optimal_value(capacity, weights, values):
     while(capacity>0 and c>=0):
     
 
-        if(weights[c] < capacity):
+        if(weights[c] <= capacity):
             capacity = capacity - weights[c]
             value = value + values[c]
         
-        elif(weights[c] == capacity):
-            value = value + values[c]
-            capacity = 0
-            
+       
         else:
             d = (capacity*values[c])/weights[c]
             value+=d
