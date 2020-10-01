@@ -14,15 +14,9 @@ def get_optimal_value(capacity, weights, values):
         for k in range(j+1,c+1):
             point = arr[j]
             if(point > arr[k]):
-                temp = arr[j]
-                arr[j] = arr[k]
-                arr[k] = temp
-                temp1 = weights[j]
-                weights[j] = weights[k]
-                weights[k] = temp1
-                temp2 = values[j]
-                values[j] = values[k]
-                values[k] = temp2
+                swap(arr[j],arr[k])
+                swap(weights[j],weights[k])
+                swap(values[j],values[k])
 
     while(capacity>0 and c>=0):
     
